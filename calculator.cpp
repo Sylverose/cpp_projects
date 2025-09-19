@@ -2,34 +2,36 @@
 #include<cmath>
 using namespace std;
 int main(){
-    //defined variables
-string operator;
-int firstnum, secondnum;
-//ask user for input
-    count<<"Write a value for the first number: ";
+string operation;
+double firstnum, secondnum;
+
+    cout<<"Write a value for the first number: ";
     cin>>firstnum;
-    count<<"Write a value for the second number: ";
+    cout<<"Write a value for the second number: ";
     cin>>secondnum;
-    count<<"Write an operator (+, -, *, /, ^): ";
-    cin>>operator;
-//calculate based on operator
-    if (operator == "+"){
-        count<<firstnum + secondnum;
+    cout<<"Write an operation (+, -, *, /, ^, ¤): ";
+    cin>>operation;
+
+    if (operation == "+"){
+        cout<<firstnum + secondnum;
     }
-    else if (operator == "-"){
-        count<<firstnum - secondnum;
+    else if (operation == "-"){
+        cout<<firstnum - secondnum;
     }
-    else if (operator == "*"){
-        count<<firstnum * secondnum;
+    else if (operation == "*"){
+        cout<<firstnum * secondnum;
     }
-    else if (operator == "/"){
-        count<<firstnum / secondnum;
+    else if (operation == "/"){
+        cout<<firstnum / secondnum;
     }
-    else if (operator == "^"){
-        count<<pow(firstnum, secondnum);
+    else if (operation == "^"){
+        cout<<pow(firstnum, secondnum);
+    }
+    else if (operation == "¤"){
+        cout<<sqrt(firstnum);
     }
     else{
-        count<<"Invalid operator";
+        cout<<"Invalid operation";
     }
     return 0;
 }
